@@ -72,3 +72,129 @@ a {
 .intro__bio:last-child {
   margin-bottom: 0;
 }
+
+/* Shapes */
+
+.shapes {
+  position: relative;
+  width: 380px;
+  height: 210px;
+  margin: 3.5rem auto 0;
+}
+
+.shape {
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.shape:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.shape__label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: 0.6rem;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.shape:hover .shape__label,
+.shape:focus-visible .shape__label {
+  opacity: 1;
+}
+
+.shape--square .shape__label {
+  color: #5c2a82;
+}
+
+.shape--circle .shape__label {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: #6e1f26;
+}
+
+.shape--diamond-dark .shape__label {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  margin: 0;
+  transform: translate(calc(-50% - 27px), calc(-50% - 27px)) rotate(-45deg);
+}
+
+.shape--diamond-gold .shape__label {
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(calc(-50% + 35px), calc(-50% - 35px)) rotate(45deg);
+}
+
+.shape--square {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #5c2a82;
+}
+
+.shape--circle {
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #6e1f26;
+}
+
+.shape--diamond {
+  top: 58px;
+  width: 58px;
+  height: 80px;
+}
+
+.shape--diamond-dark {
+  left: 48px;
+}
+
+.shape--diamond-gold {
+  right: 48px;
+}
+
+.shape__fill {
+  position: absolute;
+  inset: 0;
+  transform: rotate(45deg);
+}
+
+.shape--diamond-dark .shape__fill {
+  background: #1b1b1f;
+}
+
+.shape--diamond-gold .shape__fill {
+  background: #1b1b1f;
+}
+
+.shape__cutout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+}
