@@ -41,25 +41,3 @@ Netlify, GitHub Pages, or any static host:
   `npm run build` for you if you connect the repo directly.
 - **GitHub Pages**: push `dist/` to a `gh-pages` branch, or use their
   Vite deploy action.
-
-## About the "not on Google" part
-
-The site ships two things that ask search engines not to index it:
-
-1. `<meta name="robots" content="noindex, nofollow">` in `index.html`
-2. `public/robots.txt`, which disallows all crawlers
-
-Well-behaved crawlers (Google included) respect both, so it won't show
-up in search results and won't get suggested to people who don't
-already have the link.
-
-**What this doesn't do:** it's not access control. The page is still
-publicly reachable by anyone who has the exact URL — noindex just keeps
-it out of search results. If you want to stop even people with the link
-from getting in without your say-so, you'd need something extra, like:
-
-- Vercel/Netlify's built-in password protection (paid tiers on both)
-- A simple shared-password gate added to the page itself
-
-Happy to help add either of those if you want real access control later
-— just ask.
