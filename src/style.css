@@ -131,6 +131,14 @@ a {
   border-radius: 4px;
 }
 
+.project__screenshot {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
 /* Back to home */
 
 .back-home {
